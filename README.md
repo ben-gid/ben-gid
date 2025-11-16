@@ -1,4 +1,4 @@
-## Hi — I’m Benyamin 👋
+## Hi — I’m Benyamin Gidanian👋
 
 Curious, self-taught developer who loves problem-solving, building useful software, and learning new things. I come from a CS50 background, prefer Python as my go-to language, and I split my time between coding (web + AI), learning new toolchains, and training—running and strength work keep me sane.
 
