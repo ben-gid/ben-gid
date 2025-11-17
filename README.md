@@ -1,42 +1,57 @@
-## Hi — I’m Benyamin Gidanian👋
+## Hi — I’m Benyamin Gidanian 👋
 
-Curious, self-taught developer who loves problem-solving, building useful software, and learning new things. I come from a CS50 background, prefer Python as my go-to language, and I split my time between coding (web + AI), learning new toolchains, and training—running and strength work keep me sane.
-
----
-
-### 🔭 Right now
-- Learning **AI engineering in Python** and applying models to practical projects.  
-- Improving project READMEs so others can quickly understand and run my work.  
-- Exploring cross-platform mobile development with **Flutter** and building modern web apps (Django/Flask + REST).  
-- Training toward running goals and lifting — I enjoy combining fitness and tech (training plans, tracking, tinkering with data).
+Curious developer in Los Angeles who loves building useful software and understanding how things work. I learned to program through Harvard’s CS50 courses and now split my time between **coding (web + AI)**, **learning new toolchains**, and **training** — running and strength work keep me grounded.
 
 ---
 
-### 🛠️ Tech at a glance
-Python (strongest) · JavaScript · HTML · CSS · SQL · C (basic)  
-Django · Flask · React · Jinja · Git/GitHub · SQLite · REST APIs  
-AI/ML fundamentals (search algorithms, Minimax, CSPs, supervised learning) · TensorFlow / scikit-learn
+### 🔭 What I’m Working On
+
+* Strengthening my **Python ML** skills and applying models to real, practical projects
+* Improving the clarity and structure of my project READMEs
+* Learning **Flutter** to build cross-platform mobile apps
 
 ---
 
-### Selected projects
-(Short summaries — some project READMEs live in each repo.)
+### 🛠️ Tech Stack
 
-- **[InvoGen](https://github.com/ben-gid/cs50w-projects/tree/main/project5)** — Django app for inventory, purchases, and sales; dynamic formsets and complex validation to track serialized/non-serialized items and margins.  
-- **[E-commerce Auction Site](https://github.com/ben-gid/cs50w-projects/tree/main/project2/commerce)** — CS50w project (Django) with user auth, bidding, watchlists, categories, and comments.  
-- **[AI](https://github.com/ben-gid/cs50ai-projects): Search, Game Playing & CSPs** — Implemented DFS/BFS/A*, Minimax agents for Tic-Tac-Toe/Nim, and a crossword solver using AC-3 (CS50AI coursework).  
-- **[Machine Learning Projects](https://github.com/ben-gid/cs50ai-projects)** — Classification models and a traffic-sign neural network (CS50AI coursework).  
-- **[Natural Language & Parsing](https://github.com/ben-gid/cs50ai-projects/tree/main/parser)** — Context-free grammar parser using NLTK; hands-on with tokenization and parsing techniques.
+**Languages:** Python (strongest) · JavaScript · HTML · CSS · SQL · C (basic)
+
+**Frameworks:** Django · Flask · React · Jinja
+
+**Tools:** Git/GitHub · SQLite · REST APIs
+
+**AI/ML:** Search algorithms · Minimax · CSPs · Supervised learning · TensorFlow · scikit-learn
 
 ---
 
-### A little about how I work
-- **Problem-first:** I like breaking hard problems into implementable steps.  
-- **Practical learning:** I learn by building — small projects that solve real problems (inventory tooling, automation, small ML tasks).  
-- **Readable code + docs:** I value clear READMEs and reproducible setup instructions so others can run and extend my work.
+### 🚀 Selected Projects
+
+* **[InvoGen](https://github.com/ben-gid/cs50w-projects/tree/main/project5)** — A Django application for inventory, purchasing, and sales. Features dynamic formsets, serialized and non-serialized item tracking, and automated margin calculations.
+
+* **[E-commerce Auction Site](https://github.com/ben-gid/cs50w-projects/tree/main/project2/commerce)** — Full-featured Django app with authentication, bidding logic, watchlists, commenting, and categories.
+
+* **[Tic-Tac-Toe Agent](https://github.com/ben-gid/cs50ai-projects/tree/main/tictactoe)** — An unbeatable Tic-Tac-Toe AI using the Minimax algorithm.
+
+* **[Nim Q-Learning Agent](https://github.com/ben-gid/cs50ai-projects/tree/main/nim)** — A reinforcement learning agent that learns optimal Nim strategies using Q-learning.
+
+* **[Crossword Solver](https://github.com/ben-gid/cs50ai-projects/tree/main/crossword)** — Builds valid crosswords using constraint satisfaction and the AC-3 algorithm.
+
+* **[Traffic Sign Classifier](https://github.com/ben-gid/cs50ai-projects/tree/528bb9412233c2911d84f47f0ea9f3606f728fe7/traffic)** — CS50AI project training a neural network to recognize traffic signs.
+
+* **[Natural Language Parser](https://github.com/ben-gid/cs50ai-projects/tree/main/parser)** — A context-free grammar parser built with NLTK.
+
+---
+
+### 🧠 How I Work
+
+* **Understand first:** I like breaking systems apart mentally to see how they work.
+* **Problem-first:** I enjoy taking large problems and breaking them into actionable steps.
+* **Build to learn:** Small, practical tools and experiments teach me more than tutorials.
+* **Readable code + docs:** Clear structure, reproducible setup, and useful explanations matter.
 
 ---
 
 ### 📫 Contact
-- Email: **begidanian@gmail.com**  
 
+* **Email:** [bgidanian@gmail.com](mailto:bgidanian@gmail.com)
+* **LinkedIn:** [linkedin.com/in/benyamin-gidanian](https://www.linkedin.com/in/benyamin-gidanian-46305a364/)
