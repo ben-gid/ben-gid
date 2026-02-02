@@ -8,7 +8,7 @@ LinkedIn: [linkedin.com/in/benyamin-gidanian-46305a364/](https://www.linkedin.co
 ---
 
 ## Summary 
-Analytical Python & ML Developer dedicated to producing efficient, reproducible, and verifiable code. Grounded in a rigorous CS foundation from Harvard and Stanford, I focus on the "how and why" of algorithmic behavior to ensure system reliability. Experienced in developing high-performance ML models using TensorFlow, Scikit-learn, and XGBoost and in building traditional full-stack applications with Django and Flutter. Currently focused on bridging the gap between theoretical AI and functional software by creating modular, integration-ready models designed for production environments.
+Analytical Python & ML Developer dedicated to producing efficient, reproducible, and verifiable code. Grounded in a rigorous CS foundation from Harvard (CS50) and Stanford (Machine Learning Specialization), focusing on the "how and why" of algorithmic behavior to ensure system reliability. Experienced in developing high-performance ML models using TensorFlow, Scikit-learn, and XGBoost and in building traditional full-stack applications with Django and Flutter. Currently focused on bridging the gap between theoretical AI and functional software by creating modular, integration-ready models designed for production environments.
 
 ---
 
