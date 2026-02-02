@@ -48,14 +48,25 @@ Analytical Python & ML Developer dedicated to producing efficient, reproducible,
 
 ---
 
+### **PROFESSIONAL EXPERIENCE**
+
+**Talmud Tutor (One-on-One Mentor) | Mesivta Bircas Yitzchok | Sept 2023 – March 2025**
+
+* Facilitated deep-dive analysis of complex legal and logical frameworks, breaking down intricate multi-step arguments into digestible components for students.
+* Developed personalized curricula tailored to individual learning speeds, ensuring a 100% retention rate of core concepts over an 18-month period.
+* Cultivated rigorous analytical skills, focusing on identifying "edge cases" within theoretical legal scenarios, a methodology directly applicable to edge-case testing in software development.
+* Managed a consistent schedule of intensive one-on-one sessions, demonstrating long-term professional reliability and effective interpersonal communication.   
+
+---
+
 ### **EDUCATION & CERTIFICATIONS**
 
 **Machine Learning Specialization** | Stanford University & DeepLearning.AI (Coursera)
-* *Key Focus:* Supervised Learning, Neural Networks, Unsupervised Learning, Recommender Systems.
+* Supervised Learning, Neural Networks, Decision Trees, Unsupervised Learning, Recommender Systems.
 
 **CS50 Computer Science Suite** | Harvard University (EdX)
-* **CS50x:** Introduction to Computer Science (C, Python, SQL, Algorithms).
-* **CS50p:** Programming with Python (Unit Testing, File I/O, Regular Expressions).
+* **CS50x:** Introduction to Computer Science (C, Python, SQL, Data Structures, Algorithms).
+* **CS50p:** Programming with Python (Unit Testing, OOP, Regular Expressions).
 * **CS50ai:** Introduction to Artificial Intelligence (Search, Logic, Probability, Optimization).
 * **CS50w:** Web Programming with Python and JavaScript (Django, React, CI/CD).
 
