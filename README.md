@@ -1,44 +1,38 @@
-## Hi — I’m Benyamin Gidanian 👋
+# Hi — I’m Benyamin Gidanian 👋
 
-Curious developer in Los Angeles who loves building useful software and understanding how things work. I learned to program through Harvard’s CS50 courses and now split my time between **coding (web + AI)**, **learning new toolchains**, and **training** — running and strength work keep me grounded.
+Curious developer in Los Angeles dedicated to producing efficient, reproducible, and verifiable code. I built my foundation through Harvard’s CS50 and Stanford’s Machine Learning Specialization, and I now split my time between **AI research**, **full-stack development**, and **training** — running and strength work keep me grounded.
 
 ---
 
 ### 🔭 What I’m Working On
 
-* Strengthening my **Python ML** skills and applying models to real, practical projects
-* Improving the clarity and structure of my project READMEs
-* Learning **Flutter** to build cross-platform mobile apps
+* Applying modular ML systems to real-world integration environments
+* Enhancing the performance of reinforcement learning agents
+* Building cross-platform experiences with **Flutter**
 
 ---
 
 ### 🛠️ Tech Stack
 
-**Languages:** Python (strongest) · JavaScript · HTML · CSS · SQL · C (basic)
+**Languages:** Python · JavaScript · Dart (Flutter) · SQL · HTML5 · CSS3 · C
 
-**Frameworks:** Django · Flask · React · Jinja
+**Machine Learning & Data:** TensorFlow · Keras · NumPy · Pandas · Scikit-learn · XGBoost · Reinforcement Learning · NLP (BERT, NLTK)
 
-**Tools:** Git/GitHub · SQLite · REST APIs
+**Web Development:** Django · Flask · React · REST APIs · PostgreSQL/SQLite
 
-**AI/ML:** Search algorithms · Minimax · CSPs · Supervised learning · TensorFlow · scikit-learn
+**Tools:** Git/GitHub · Linux/Bash · Jupyter Notebooks · Pytest · Docker
 
 ---
 
 ### 🚀 Selected Projects
 
-* **[InvoGen](https://github.com/ben-gid/cs50w-projects/tree/main/project5)** — A Django application for inventory, purchasing, and sales. Features dynamic formsets, serialized and non-serialized item tracking, and automated margin calculations.
+* **[ML Fundamentals Library](https://github.com/ben-gid/ml_fundamentals)** — A modular ML library built from scratch using NumPy. Features a custom Deep Learning engine with manual backpropagation and implementations of Linear/Logistic Regression, K-Means, and Decision Trees.
 
-* **[E-commerce Auction Site](https://github.com/ben-gid/cs50w-projects/tree/main/project2/commerce)** — Full-featured Django app with authentication, bidding logic, watchlists, commenting, and categories.
+* **[DQN for Autonomous Lunar Landing](https://github.com/ben-gid/LunarLander)** — A Deep Q-Network Agent implemented with TensorFlow/Keras to solve the Gymnasium LunarLander environment. Includes stability mechanisms like Experience Replay and Target Networks.
 
-* **[Tic-Tac-Toe Agent](https://github.com/ben-gid/cs50ai-projects/tree/main/tictactoe)** — An unbeatable Tic-Tac-Toe AI using the Minimax algorithm.
+* **[Social Network Platform](https://github.com/ben-gid/network)** — A full-stack application built with Django and React. Features a RESTful API, scalable database schema, and optimized server-side pagination for post interactions.
 
-* **[Nim Q-Learning Agent](https://github.com/ben-gid/cs50ai-projects/tree/main/nim)** — A reinforcement learning agent that learns optimal Nim strategies using Q-learning.
-
-* **[Crossword Solver](https://github.com/ben-gid/cs50ai-projects/tree/main/crossword)** — Builds valid crosswords using constraint satisfaction and the AC-3 algorithm.
-
-* **[Traffic Sign Classifier](https://github.com/ben-gid/cs50ai-projects/tree/528bb9412233c2911d84f47f0ea9f3606f728fe7/traffic)** — CS50AI project training a neural network to recognize traffic signs.
-
-* **[Natural Language Parser](https://github.com/ben-gid/cs50ai-projects/tree/main/parser)** — A context-free grammar parser built with NLTK.
+* **[AI Crossword Generator](https://github.com/ben-gid/Crossword)** — A Constraint Satisfaction Problem (CSP) solver that generates complex crossword puzzles using backtracking search optimized with AC-3, MRV, and LCV heuristics.
 
 ---
 

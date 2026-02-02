@@ -15,7 +15,7 @@ Analytical Python & ML Developer dedicated to producing efficient, reproducible,
 ## Technical Skills
 **Languages:** Python, Dart(flutter), JavaScript, SQL, C, HTML5, CSS3  
 **Machine Learning:** Supervised Learning (Regression/Classification), Unsupervised Learning, Recommender Systems, Reinforcement Learning, Neural Networks, Decision Trees, XGBoost  
-**Deep Learning / NLP:** TensorFlow, Keras, BERT, Attention Mechanisms, NLTK, Tokenization  
+**Deep Learning / NLP:** TensorFlow, Keras, scikit-learn, BERT, Attention Mechanisms, NLTK, Tokenization  
 **Data Engineering:** NumPy, Pandas, Data Preprocessing, Feature Engineering, Evaluation Metrics (Precision/Recall, F1-Score)  
 **Web Development:** Django, Flask, React, DOM Manipulation, Database Design  
 **Developer Tools:** Git, GitHub, Linux, Bash, Jupyter Notebooks, Debugging, Testing
