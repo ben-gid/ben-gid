@@ -17,7 +17,7 @@ Analytical Python & ML Developer dedicated to producing efficient, reproducible,
 **Machine Learning:** Supervised Learning (Regression/Classification), Unsupervised Learning, Recommender Systems, Reinforcement Learning, Neural Networks, Decision Trees, XGBoost  
 **Deep Learning / NLP:** PyTorch, Torchvision, TensorFlow, Keras, scikit-learn, BERT, Attention Mechanisms, NLTK, Tokenization  
 **Data Engineering:** NumPy, Pandas, Data Preprocessing, Feature Engineering, Evaluation Metrics (Precision/Recall, F1-Score)  
-**Web Development:** Django, Flask, React, DOM Manipulation, Database Design  
+**Web Development:** Django, FastAPI,Flask, React, DOM Manipulation, Database Design  
 **Developer Tools:** Git, GitHub, Linux, Bash, Jupyter Notebooks, Debugging, Testing
 
 ---
@@ -25,6 +25,7 @@ Analytical Python & ML Developer dedicated to producing efficient, reproducible,
 ### **TECHNICAL PROJECTS**
 
 **ML Fundamentals Library | Python, NumPy, Matplotlib, Pytest** [GitHub Link](https://github.com/ben-gid/ml_fundamentals)
+
 * **Architected** a modular machine learning library from scratch using **NumPy**, implementing 6+ core algorithms (Linear/Logistic Regression, K-Means, Decision Trees, Neural Networks) without high-level frameworks.
 
 * **Developed** a custom Deep Learning engine featuring manual backpropagation and a Keras-inspired Sequential API for model building.
@@ -35,6 +36,7 @@ Analytical Python & ML Developer dedicated to producing efficient, reproducible,
 
 
 **Deep Q-Network (DQN) for Autonomous Lunar Landing | Reinforcement Learning, TensorFlow, Gymnasium, Python** [GitHub Link](https://github.com/ben-gid/LunarLander)
+
 * **Implemented** a DQN Agent from scratch using **TensorFlow/Keras** to solve the Gymnasium LunarLander-v3 environment, achieving a "solved" status with a rolling average score of 200+.
 
 * **Engineered** stability mechanisms including **Experience Replay** (using collections.deque) to break temporal correlations and **Target Networks** with Soft Updates (τ=0.001) to prevent model oscillations during training.
@@ -43,6 +45,7 @@ Analytical Python & ML Developer dedicated to producing efficient, reproducible,
 
 
 **Full-Stack Social Networking Platform (Django & React)** [GitHub Link](https://github.com/ben-gid/network)
+
 * **Designed** and implemented a scalable relational database schema using **Django ORM**, managing complex many-to-many relationships for user follows and post interactions.
 
 * **Developed** a RESTful API used by a **React** frontend to handle asynchronous data updates (likes, edits) without page reloads, improving UX latency.
@@ -53,6 +56,7 @@ Analytical Python & ML Developer dedicated to producing efficient, reproducible,
 
 
 **Crossword Puzzle Generator (AI/Search Optimization) | AI/Search Optimization, Python** [GitHub Link](https://github.com/ben-gid/Crossword)
+
 * **Implemented** a Constraint Satisfaction Problem (CSP) solver to automatically generate complex crossword puzzles using Python.
 
 * **Engineered** a backtracking search algorithm optimized with AC-3 (Arc Consistency) to reduce search space by over 80%.
@@ -78,6 +82,7 @@ Analytical Python & ML Developer dedicated to producing efficient, reproducible,
 ### **EDUCATION & CERTIFICATIONS**
 
 **Machine Learning Specialization** | Stanford University & DeepLearning.AI (Coursera)
+
 * Supervised Learning, Neural Networks, Decision Trees, Unsupervised Learning, Recommender Systems.
 
 **CS50 Computer Science Suite** | Harvard University (EdX)
