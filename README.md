@@ -16,15 +16,17 @@ Curious developer in Los Angeles dedicated to producing efficient, reproducible,
 
 **Languages:** Python · JavaScript · Dart (Flutter) · SQL · HTML5 · CSS3 · C
 
-**Machine Learning & Data:** TensorFlow · Keras · NumPy · Pandas · Scikit-learn · XGBoost · Reinforcement Learning · NLP (BERT, NLTK)
+**Machine Learning & Data:** PyTorch · TensorFlow · Keras · NumPy · Pandas · Scikit-learn · Reinforcement Learning · NLP (BERT, NLTK)
 
-**Web Development:** Django · Flask · React · REST APIs · PostgreSQL/SQLite
+**Web Development:** FastAPI · Django · Flask · React · REST APIs · PostgreSQL/SQLite
 
-**Tools:** Git/GitHub · Linux/Bash · Jupyter Notebooks · Pytest · Docker
+**Tools:** UV · Docker · Git/GitHub · Linux/Bash · Jupyter Notebooks · Pytest
 
 ---
 
 ### 🚀 Selected Projects
+
+* **[Flower Classification API](https://github.com/ben-gid/flowers)** — A production-ready computer vision service built with **PyTorch** and **FastAPI**. Features a self-training CNN pipeline, automated dataset orchestration, and a robust test suite. Optimized for high-throughput inference using **Docker** and **uv**.
 
 * **[ML Fundamentals Library](https://github.com/ben-gid/ml_fundamentals)** — A modular ML library built from scratch using NumPy. Features a custom Deep Learning engine with manual backpropagation and implementations of Linear/Logistic Regression, K-Means, and Decision Trees.
 
