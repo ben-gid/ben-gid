@@ -10,52 +10,46 @@ LinkedIn: https://linkedin.com/in/benyamin-gidanian-46305a364
 
 ## Summary
 
-Machine Learning Engineer with a strong foundation in computer science and applied AI, trained through Harvard’s CS50 suite and Stanford’s Machine Learning Specialization. Experienced in designing, training, and optimizing machine learning models across supervised learning, deep learning, and reinforcement learning domains.
+Applied Machine Learning Engineer with a strong software engineering foundation (Harvard CS50) and a deep understanding of ML theory (Stanford). Experienced in building, optimizing, and deploying machine learning systems that bridge the gap between research and production. 
 
-Focused on building efficient, reproducible, and well-validated ML systems with an emphasis on algorithmic correctness, training stability, and performance optimization. Passionate about translating theoretical ML concepts into high-quality, production-ready implementations.
+Focused on creating robust, high-performance ML services with an emphasis on algorithmic precision, training stability, and containerized deployment. Passionate about translating complex models into efficient, low-latency applications through rigorous software engineering practices and MLOps principles.
 
 ---
 
 ## Technical Skills
 
-**Languages:** Python, SQL, JavaScript, Dart (Flutter), C  
+**Core AI & Machine Learning:** Supervised/Unsupervised Learning, Deep Learning (CNNs, Neural Networks), Reinforcement Learning (DQN), Recommender Systems, Feature Engineering, Model Optimization (XGBoost, Decision Trees).
 
-**Machine Learning:** Supervised Learning (Regression, Classification), Unsupervised Learning, Recommender Systems, Reinforcement Learning, Neural Networks, Decision Trees, XGBoost  
+**Frameworks & Libraries:** PyTorch, TensorFlow, Keras, Torchvision, Scikit-learn, NumPy, Pandas, Matplotlib.
 
-**Deep Learning:** PyTorch, TensorFlow, Keras, Torchvision, BERT, Attention Mechanisms  
+**MLOps & Deployment:** Docker, FastAPI, RESTful APIs, GitHub Actions (CI/CD), CUDA Acceleration, Linux, Bash.
 
-**Reinforcement Learning:** DQN, Experience Replay, Target Networks, Soft Updates  
-
-**Data & Experimentation:** NumPy, Pandas, Feature Engineering, Data Preprocessing, Model Evaluation (Precision, Recall, F1-Score), Hyperparameter Tuning  
-
-**Backend & Integration:** FastAPI, Django, Flask, RESTful APIs  
-
-**Tools:** Docker, Git, GitHub Actions (CI/CD), Linux, Bash, Pytest, Jupyter Notebooks  
+**Software Engineering:** Python (Expert), SQL, C, Dart (Flutter), JavaScript, Unit Testing (Pytest), Git, Data Structures & Algorithms.
 
 ---
 
 # Technical Projects
 
+## End-to-End Flower Classification & Deployment Service  
+*Python, PyTorch, FastAPI, Docker, CUDA*  
+GitHub: https://github.com/ben-gid/flowers  
+
+- Designed and trained a custom Convolutional Neural Network (CNN) in PyTorch on the Oxford-102 dataset, implementing structured training loops and learning rate scheduling.  
+- Engineered a real-time inference service using FastAPI, enabling low-latency model predictions and robust input validation.  
+- Optimized training runtime through CUDA acceleration and leveraged Torchvision for automated dataset ingestion and validation.  
+- Containerized the entire ML pipeline using Docker to ensure reproducible deployments across environments.  
+- Built a comprehensive test suite in Pytest validating the model lifecycle, input constraints, and inference stability.  
+
+---
+
 ## ML Fundamentals Library  
 *Python, NumPy, Matplotlib, Pytest*  
 GitHub: https://github.com/ben-gid/ml_fundamentals  
 
-- Designed and implemented a modular machine learning library from scratch using NumPy, developing 6+ core algorithms including Linear/Logistic Regression, K-Means, Decision Trees, and Neural Networks without high-level frameworks.  
-- Built a custom deep learning engine with manual backpropagation, enabling transparent gradient flow and improved conceptual control over training dynamics.  
-- Optimized numerical computations through vectorization, significantly improving runtime performance and computational efficiency.  
-- Achieved 100% unit test coverage using Pytest and developed an AST-based documentation generator to enforce reproducibility and code clarity.  
-
----
-
-## Flower Classification Inference Service  
-*Python, PyTorch, FastAPI, Docker*  
-GitHub: https://github.com/ben-gid/flowers  
-
-- Designed and trained a custom Convolutional Neural Network (CNN) in PyTorch on the Oxford-102 dataset with structured training loops and learning rate scheduling.  
-- Leveraged CUDA acceleration to improve training efficiency and reduce epoch runtime.  
-- Developed a real-time inference service using FastAPI to deploy and validate model predictions under low-latency constraints.  
-- Implemented automated dataset ingestion and validation using Torchvision to ensure clean, consistent training data.  
-- Built a comprehensive test suite validating model lifecycle, input constraints, and inference stability.  
+- Developed a high-performance machine learning library from scratch using NumPy, implementing 6+ core algorithms including Linear/Logistic Regression, K-Means, and Neural Networks.  
+- Built a custom deep learning engine with manual backpropagation, enabling granular control over gradient flow and training dynamics.  
+- Optimized computational performance through extensive vectorization, significantly reducing training overhead.  
+- Maintained 100% unit test coverage and automated documentation via an AST-based generator to ensure software engineering rigor and reliability.  
 
 ---
 
@@ -63,29 +57,27 @@ GitHub: https://github.com/ben-gid/flowers
 *Reinforcement Learning, TensorFlow, Gymnasium, Python*  
 GitHub: https://github.com/ben-gid/LunarLander  
 
-- Implemented a Deep Q-Network (DQN) agent from scratch using TensorFlow/Keras to solve the LunarLander-v3 environment, achieving a solved threshold with a rolling average score above 200.  
-- Engineered stability mechanisms including Experience Replay (deque buffer) and Target Networks with soft updates (τ=0.001) to reduce Q-value divergence and improve convergence stability.  
-- Optimized training execution using tf.function for graph-mode acceleration, reducing per-episode training time.  
+- Implemented a Deep Q-Network (DQN) agent from scratch using TensorFlow/Keras to solve the LunarLander-v3 environment, consistently achieving the solved threshold (score > 200).  
+- Engineered stability mechanisms including Experience Replay buffers and Target Networks with soft updates (τ=0.001) to mitigate Q-value divergence and ensure convergence.  
+- Accelerated training throughput using `tf.function` graph-mode execution, significantly reducing per-episode runtime.  
 
 ---
 
-## Crossword Puzzle Generator (Constraint Satisfaction Solver)  
-*Python, Search Optimization*  
+## Advanced Search & Constraint Satisfaction Solver  
+*Python, AI Search Heuristics*  
 GitHub: https://github.com/ben-gid/Crossword  
 
-- Implemented a Constraint Satisfaction Problem (CSP) solver to generate dense crossword grids.  
-- Optimized backtracking search using AC-3 arc consistency, reducing the search space by over 80%.  
-- Integrated MRV and LCV heuristics to improve constraint propagation efficiency and solution speed.  
+- Implemented a Constraint Satisfaction Problem (CSP) solver to generate dense crossword grids using backtracking search.  
+- Reduced search space by 80% through AC-3 arc consistency and optimized performance via MRV and LCV heuristics.  
 
 ---
 
 ## Full-Stack Social Networking Platform  
-*Django, React*  
+*Django, React, SQL*  
 GitHub: https://github.com/ben-gid/network  
 
-- Designed a relational schema using Django ORM to manage complex user relationships.  
-- Built RESTful APIs enabling asynchronous frontend interactions.  
-- Optimized database queries using select_related and prefetch_related to improve performance.  
+- Developed a relational schema and RESTful APIs using Django ORM and React to manage complex user relationships and real-time frontend interactions.  
+- Optimized database query performance using `select_related` and `prefetch_related` to minimize latency.  
 
 ---
 
