@@ -1,49 +1,51 @@
-# Hi — I’m Benyamin Gidanian 👋
+# Hi — I'm Benyamin Gidanian 👋
 
-Curious developer in Los Angeles dedicated to producing efficient, reproducible, and verifiable code. I built my foundation through Harvard’s CS50 and Stanford’s Machine Learning Specialization, and I now split my time between **AI research**, **full-stack development**, and **training** — running and strength work keep me grounded.
+Applied ML/AI engineer in Los Angeles focused on building end-to-end systems that go from raw data to deployed, tested inference services. I built my foundation through Harvard's CS50 and Stanford's Machine Learning Specialization, and I'm currently expanding into **NLP, LLMs, and multimodal learning** — shipping real projects at each step.
 
 ---
 
-### 🔭 What I’m Working On
+### 🔭 What I'm Working On
 
-* Applying modular ML systems to real-world integration environments
-* Enhancing the performance of reinforcement learning agents
-* Building cross-platform experiences with **Flutter**
+* **Multimodal recommendation system** — combining a CNN visual encoder, sentence-transformer text encoder, and collaborative filtering on the Amazon Reviews dataset
+* **NLP & embedding pipelines** — hands-on work with dense retrieval, semantic similarity, and LLM integration
+* Deepening production ML skills: model versioning, data pipelines, and scalable serving
 
 ---
 
 ### 🛠️ Tech Stack
 
-**Languages:** Python · JavaScript · Dart (Flutter) · SQL · HTML5 · CSS3 · C
+**ML/AI:** PyTorch · TensorFlow · Keras · CUDA · Hugging Face Transformers & Hub · Torchvision · Scikit-learn · BERT · Reinforcement Learning
 
-**Machine Learning & Data:** PyTorch · TensorFlow · Keras · NumPy · Pandas · Scikit-learn · Reinforcement Learning · NLP (BERT, NLTK)
+**ML Engineering:** FastAPI · Docker · GitHub Actions (CI/CD) · Pytest · Ruff · Pyright · uv
 
-**Web Development:** FastAPI · Django · Flask · React · REST APIs · PostgreSQL/SQLite
+**Data:** NumPy · Pandas · Feature Engineering · Data Preprocessing
 
-**Tools:** UV · Docker · Git/GitHub · Linux/Bash · Jupyter Notebooks · Pytest
+**Web:** Django · Flask · React · REST APIs · PostgreSQL/SQLite
+
+**Languages:** Python · SQL · JavaScript · C
+
+**Tools:** Git · Linux/Bash · Jupyter Notebooks
 
 ---
 
 ### 🚀 Selected Projects
 
-* **[Flower Classification API](https://github.com/ben-gid/flowers)** — A production-ready computer vision service built with **PyTorch** and **FastAPI**. Features a self-training CNN pipeline, automated dataset orchestration, and a robust test suite. Optimized for high-throughput inference using **Docker** and **uv**.
+* **[Flower Classification API](https://github.com/ben-gid/flowers)** — Production-ready CV service achieving **>93% accuracy** on 102 flower classes via two-stage EfficientNet-B0 fine-tuning with differential learning rates (+30 points over a custom CNN trained from scratch). Served via FastAPI with dual model endpoints, HuggingFace Hub weight hosting, and a full CI pipeline: Ruff → Pyright → Pytest → Docker build.
 
-* **[ML Fundamentals Library](https://github.com/ben-gid/ml_fundamentals)** — A modular ML library built from scratch using NumPy. Features a custom Deep Learning engine with manual backpropagation and implementations of Linear/Logistic Regression, K-Means, and Decision Trees.
+* **[ML Fundamentals Library](https://github.com/ben-gid/ml_fundamentals)** — NumPy-only ML library built from scratch with manual backpropagation, covering Linear/Logistic Regression, K-Means, Decision Trees, and a multi-layer Neural Network. 100% Pytest coverage with a custom AST-based documentation generator.
 
-* **[DQN for Autonomous Lunar Landing](https://github.com/ben-gid/LunarLander)** — A Deep Q-Network Agent implemented with TensorFlow/Keras to solve the Gymnasium LunarLander environment. Includes stability mechanisms like Experience Replay and Target Networks.
+* **[DQN for Autonomous Lunar Landing](https://github.com/ben-gid/LunarLander)** — Deep Q-Network agent in TensorFlow/Keras solving LunarLander-v3 (rolling average > 200). Includes Experience Replay, Target Networks with soft updates (τ=0.001), and `tf.function` graph-mode acceleration.
 
-* **[Social Network Platform](https://github.com/ben-gid/network)** — A full-stack application built with Django and React. Features a RESTful API, scalable database schema, and optimized server-side pagination for post interactions.
-
-* **[AI Crossword Generator](https://github.com/ben-gid/Crossword)** — A Constraint Satisfaction Problem (CSP) solver that generates complex crossword puzzles using backtracking search optimized with AC-3, MRV, and LCV heuristics.
+* **[AI Crossword Generator](https://github.com/ben-gid/Crossword)** — CSP solver generating dense crossword grids using backtracking search with AC-3 arc consistency (80%+ search space reduction), MRV, and LCV heuristics.
 
 ---
 
 ### 🧠 How I Work
 
-* **Understand first:** I like breaking systems apart mentally to see how they work.
-* **Problem-first:** I enjoy taking large problems and breaking them into actionable steps.
-* **Build to learn:** Small, practical tools and experiments teach me more than tutorials.
-* **Readable code + docs:** Clear structure, reproducible setup, and useful explanations matter.
+* **Understand first:** I break systems apart mentally before touching code — knowing *why* something works matters as much as *that* it works.
+* **Build to learn:** Small, practical experiments teach me more than tutorials.
+* **Ship it tested:** CI pipelines, typed code, and reproducible setups are part of the work, not afterthoughts.
+* **Iterate on results:** I benchmark, measure, and go again — 63% → 93% doesn't happen in one shot.
 
 ---
 
