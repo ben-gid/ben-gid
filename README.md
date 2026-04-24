@@ -1,34 +1,39 @@
 # Hi — I'm Benyamin Gidanian 👋
 
-Applied ML/AI engineer in Los Angeles focused on building end-to-end systems that go from raw data to deployed, tested inference services. I built my foundation through Harvard's CS50 and Stanford's Machine Learning Specialization, and I'm currently expanding into **NLP, LLMs, and multimodal learning** — shipping real projects at each step.
+Applied ML/AI engineer in Los Angeles building end-to-end systems from raw data to deployed, tested inference services. I built my foundation through Harvard's CS50 and Stanford's Machine Learning Specialization, and I'm currently expanding into **NLP, LLMs, RAG, and MLOps** — shipping real projects at each step.
 
 ---
 
 ### 🔭 What I'm Working On
 
-* **Multimodal recommendation system** — combining a CNN visual encoder, sentence-transformer text encoder, and collaborative filtering on the Amazon Reviews dataset
-* **NLP & embedding pipelines** — hands-on work with dense retrieval, semantic similarity, and LLM integration
-* Deepening production ML skills: model versioning, data pipelines, and scalable serving
+* **Domain Intelligence Platform** *(in progress)* — fine-tuning a DistilBERT/DeBERTa model on domain-specific text, governed by a full MLOps pipeline (W&B experiment tracking, versioned model registry, Evidently drift detection, automated challenger/champion promotion), with a LangChain RAG layer for semantic querying over a document corpus — deployed on AWS ECS Fargate
+* Deepening production ML skills: model versioning, drift monitoring, RAG evaluation with RAGAS, and cloud-native serving
 
 ---
 
 ### 🛠️ Tech Stack
 
-**ML/AI:** PyTorch · TensorFlow · Keras · CUDA · Hugging Face Transformers & Hub · Torchvision · Scikit-learn · BERT · Reinforcement Learning
+**ML/AI:** PyTorch · TensorFlow · Keras · CUDA · Hugging Face Transformers & Hub · Torchvision · timm · ConvNeXt · BERT · Sentence Transformers · Scikit-learn · Reinforcement Learning
 
-**ML Engineering:** FastAPI · Docker · GitHub Actions (CI/CD) · Pytest · Ruff · Pyright · uv
+**NLP/LLM:** LangChain · RAG Pipelines · Vector Databases (ChromaDB / Pinecone) · RAGAS Evaluation · Prompt Engineering
+
+**MLOps:** W&B / MLflow · Evidently AI · Model Registry · Experiment Tracking · FastAPI · Docker · ECR · ECS Fargate · GitHub Actions (CI/CD) · Pytest · Ruff · Pyright · uv
 
 **Data:** NumPy · Pandas · Feature Engineering · Data Preprocessing
 
-**Web:** Django · Flask · React · REST APIs · PostgreSQL/SQLite
+**Web:** Django · Flask · React · REST APIs · PostgreSQL / SQLite
 
 **Languages:** Python · SQL · JavaScript · C
 
-**Tools:** Git · Linux/Bash · Jupyter Notebooks
+**Tools:** Git · Linux / Bash · Jupyter Notebooks
 
 ---
 
 ### 🚀 Selected Projects
+
+* **[Domain Intelligence Platform](https://github.com/ben-gid)** *(in progress)* — End-to-end NLP system fine-tuning DistilBERT/DeBERTa on domain-specific classification via HuggingFace Trainer API, with a full MLOps pipeline (W&B tracking, versioned registry, Evidently drift detection, automated challenger/champion promotion) and a LangChain RAG layer over a domain corpus using sentence-transformers and ChromaDB. Evaluated with RAGAS across faithfulness, answer relevancy, and context precision. Deployed as dual FastAPI services (inference + RAG) on AWS ECS Fargate via ECR, with model CI/CD in GitHub Actions.
+
+* **[Gravitational Lens Finding — ML4SCI DeepLense GSoC 2026](https://github.com/ben-gid)** — Achieved **0.9887 AUROC** on binary gravitational lens finding (16.6:1 class imbalance) with ConvNeXt-Tiny — within 0.006 of a purpose-built equivariant neural network (Parul et al., NeurIPS ML4PS 2024). Achieved **0.98 macro AUROC** on 3-class lensing substructure classification via two-phase EfficientNet-B0 fine-tuning with discriminative learning rates. Addressed severe class imbalance through WeightedRandomSampler and calibrated BCEWithLogitsLoss pos-weighting.
 
 * **[Flower Classification API](https://github.com/ben-gid/flowers)** — Production-ready CV service achieving **>93% accuracy** on 102 flower classes via two-stage EfficientNet-B0 fine-tuning with differential learning rates (+30 points over a custom CNN trained from scratch). Served via FastAPI with dual model endpoints, HuggingFace Hub weight hosting, and a full CI pipeline: Ruff → Pyright → Pytest → Docker build.
 
