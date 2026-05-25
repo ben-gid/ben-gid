@@ -31,7 +31,8 @@ Applied ML/AI engineer in Los Angeles building end-to-end systems from raw data 
 
 ### 🚀 Selected Projects
 
-* **[Domain Intelligence Platform](https://github.com/ben-gid/domain_intelligence_platform)** *(in progress)* — End-to-end NLP system fine-tuning DistilBERT/DeBERTa on domain-specific classification via HuggingFace Trainer API, with a full MLOps pipeline (W&B tracking, versioned registry, Evidently drift detection, automated challenger/champion promotion) and a LangChain RAG layer over a domain corpus using sentence-transformers and ChromaDB. Evaluated with RAGAS across faithfulness, answer relevancy, and context precision. Deployed as dual FastAPI services (inference + RAG) on AWS ECS Fargate via ECR, with model CI/CD in GitHub Actions.
+* **[PII Redaction API](https://github.com/ben-gid/pii_redaction)** *(in progress)* — Fine-tuning DeBERTa-v3 to detect and redact personally identifiable information from text before it enters an LLM pipeline. FastAPI service deployed to AWS ECS Fargate with a HuggingFace Spaces demo.
+
 
 * **[Gravitational Lens Finding — ML4SCI DeepLense GSoC 2026](https://github.com/ben-gid/deeplense_tests)** — Achieved **0.9887 AUROC** on binary gravitational lens finding (16.6:1 class imbalance) with ConvNeXt-Tiny — within 0.006 of a purpose-built equivariant neural network (Parul et al., NeurIPS ML4PS 2024). Achieved **0.98 macro AUROC** on 3-class lensing substructure classification via two-phase EfficientNet-B0 fine-tuning with discriminative learning rates. Addressed severe class imbalance through WeightedRandomSampler and calibrated BCEWithLogitsLoss pos-weighting.
 
