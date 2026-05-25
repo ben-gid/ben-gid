@@ -6,8 +6,7 @@ Applied ML/AI engineer in Los Angeles building end-to-end systems from raw data 
 
 ### 🔭 What I'm Working On
 
-* **Domain Intelligence Platform** *(in progress)* — fine-tuning a DistilBERT/DeBERTa model on domain-specific text, governed by a full MLOps pipeline (W&B experiment tracking, versioned model registry, Evidently drift detection, automated challenger/champion promotion), with a LangChain RAG layer for semantic querying over a document corpus — deployed on AWS ECS Fargate
-* Deepening production ML skills: model versioning, drift monitoring, RAG evaluation with RAGAS, and cloud-native serving
+* **[PII Redaction API](https://github.com/ben-gid/pii_redaction)** *(in progress)* — Fine-tuning DeBERTa-v3 to detect and redact personally identifiable information from text before it enters an LLM pipeline. FastAPI service deployed to AWS ECS Fargate with a HuggingFace Spaces demo.
 
 ---
 
@@ -30,9 +29,6 @@ Applied ML/AI engineer in Los Angeles building end-to-end systems from raw data 
 ---
 
 ### 🚀 Selected Projects
-
-* **[PII Redaction API](https://github.com/ben-gid/pii_redaction)** *(in progress)* — Fine-tuning DeBERTa-v3 to detect and redact personally identifiable information from text before it enters an LLM pipeline. FastAPI service deployed to AWS ECS Fargate with a HuggingFace Spaces demo.
-
 
 * **[Gravitational Lens Finding — ML4SCI DeepLense GSoC 2026](https://github.com/ben-gid/deeplense_tests)** — Achieved **0.9887 AUROC** on binary gravitational lens finding (16.6:1 class imbalance) with ConvNeXt-Tiny — within 0.006 of a purpose-built equivariant neural network (Parul et al., NeurIPS ML4PS 2024). Achieved **0.98 macro AUROC** on 3-class lensing substructure classification via two-phase EfficientNet-B0 fine-tuning with discriminative learning rates. Addressed severe class imbalance through WeightedRandomSampler and calibrated BCEWithLogitsLoss pos-weighting.
 
