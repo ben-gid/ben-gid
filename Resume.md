@@ -7,7 +7,7 @@ Los Angeles, CA 90034 · (310) 613-3655 · bgidanian@gmail.com
 
 ## Summary
 
-Applied ML/AI engineer with hands-on experience building end-to-end systems in PyTorch and TensorFlow — from custom CNN architectures and domain adaptation pipelines to FastAPI inference services and Dockerized deployments. Experience spanning both research-grade modeling (astrophysical image classification, severe class imbalance, ROC/AUC benchmarking against published baselines) and production engineering (CI/CD, containerization, HuggingFace Hub integration). Strong foundations in training stability, transfer learning, and GPU-accelerated computation.
+Applied ML/AI engineer with hands-on experience building end-to-end systems in PyTorch — from custom CNN architectures and domain adaptation pipelines to FastAPI inference services and Dockerized deployments. Experience spanning both research-grade modeling (astrophysical image classification, severe class imbalance, ROC/AUC benchmarking against published baselines) and production engineering (CI/CD, containerization, HuggingFace Hub integration). Strong foundations in training stability, transfer learning, and GPU-accelerated computation.
 
 ---
 
@@ -25,7 +25,7 @@ Applied ML/AI engineer with hands-on experience building end-to-end systems in P
 ## Projects
 
 ### PII Redaction API
-*PyTorch · DeBERTa-v3 · HuggingFace Trainer · FastAPI · Docker · AWS ECS Fargate *(in progress)*
+*PyTorch · DeBERTa-v3 · HuggingFace Trainer · FastAPI · Docker · AWS ECS Fargate (in progress)*
 [GitHub](https://github.com/ben-gid/pii_redaction)
 
 Fine-tuning `microsoft/deberta-v3-base` on the `ai4privacy/pii-masking-300k` dataset for named entity recognition across PII categories including names, emails, SSNs, and phone numbers. Implements BIO token classification with proper subword label alignment, evaluated via seqeval entity-level F1. Post-processing layer aggregates per-token logits into character-level spans and replaces them with typed placeholders (`[NAME]`, `[EMAIL]`, etc.) with a configurable confidence threshold. Deployed as a FastAPI service (API key auth, Pydantic validation, structured error responses) on AWS ECS Fargate via Docker + ECR, with a public Gradio demo on HuggingFace Spaces. Training tracked with Weights & Biases; fine-tuned model and card published to HuggingFace Hub.
