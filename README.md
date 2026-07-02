@@ -6,7 +6,7 @@ Applied ML/AI engineer in Los Angeles building end-to-end systems from raw data 
 
 ### 🔭 What I'm Working On
 
-* **[PII Redaction API](https://github.com/ben-gid/pii_redaction)** *(in progress)* — Fine-tuning DeBERTa-v3 to detect and redact personally identifiable information from text before it enters an LLM pipeline. FastAPI service deployed to AWS ECS Fargate with a HuggingFace Spaces demo.
+* Expanding into **NLP, LLMs, and RAG** — building on the DeBERTa NER work from PII Redaction toward retrieval-augmented pipelines and LLM-based tooling.
 
 ---
 
@@ -16,7 +16,7 @@ Applied ML/AI engineer in Los Angeles building end-to-end systems from raw data 
 
 **NLP/LLM:** LangChain · RAG Pipelines · Vector Databases (ChromaDB / Pinecone) · RAGAS Evaluation · Prompt Engineering
 
-**MLOps:** W&B / MLflow · Evidently AI · Model Registry · Experiment Tracking · FastAPI · Docker · ECR · ECS Fargate · GitHub Actions (CI/CD) · Pytest · Ruff · Pyright · uv
+**MLOps:** W&B / MLflow · Evidently AI · Model Registry · Experiment Tracking · FastAPI · Docker · AWS (ECR · ECS Fargate · SSM Parameter Store) · Cloudflare · GitHub Actions (CI/CD) · Pytest · Ruff · Pyright · uv
 
 **Data:** NumPy · Pandas · Feature Engineering · Data Preprocessing
 
@@ -29,6 +29,8 @@ Applied ML/AI engineer in Los Angeles building end-to-end systems from raw data 
 ---
 
 ### 🚀 Selected Projects
+
+* **[PII Redaction API](https://github.com/ben-gid/pii_redaction)** — Fine-tuned three DeBERTa-v3 models (base/small/xsmall) on 27 PII entity types, achieving up to **0.9557 macro F1**. Deployed as a FastAPI service on **AWS ECS Fargate** with a custom domain, Cloudflare TLS, and a full GitHub Actions CI/CD pipeline (lint → type-check → test → build → deploy) triggered on every push. [Live demo](https://pii-redaction.bengid.dev/demo) · Models on [HuggingFace Hub](https://huggingface.co/bengid).
 
 * **[Gravitational Lens Finding — ML4SCI DeepLense GSoC 2026](https://github.com/ben-gid/deeplense_tests)** — Achieved **0.9887 AUROC** on binary gravitational lens finding (16.6:1 class imbalance) with ConvNeXt-Tiny — within 0.006 of a purpose-built equivariant neural network (Parul et al., NeurIPS ML4PS 2024). Achieved **0.98 macro AUROC** on 3-class lensing substructure classification via two-phase EfficientNet-B0 fine-tuning with discriminative learning rates. Addressed severe class imbalance through WeightedRandomSampler and calibrated BCEWithLogitsLoss pos-weighting.
 

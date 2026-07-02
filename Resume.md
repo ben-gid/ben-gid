@@ -7,15 +7,17 @@ Los Angeles, CA 90034 · (310) 613-3655 · bgidanian@gmail.com
 
 ## Summary
 
-Applied ML/AI engineer with hands-on experience building end-to-end systems in PyTorch — from custom CNN architectures and domain adaptation pipelines to FastAPI inference services and Dockerized deployments. Experience spanning both research-grade modeling (astrophysical image classification, severe class imbalance, ROC/AUC benchmarking against published baselines) and production engineering (CI/CD, containerization, HuggingFace Hub integration). Strong foundations in training stability, transfer learning, and GPU-accelerated computation.
+Applied AI/ML engineer who builds and ships systems end-to-end — from fine-tuning and evaluating models to deploying them as live, production services. Comfortable across the full stack: PyTorch model development, Python backend services (FastAPI, Django), Docker containerization, CI/CD, and cloud deployment (AWS ECS Fargate). Background spans NLP (transformer fine-tuning, token classification), computer vision (transfer learning, class imbalance), and full-stack web development. Moves fast, experiments with new tools and approaches, and focuses on shipping things that work.
 
 ---
 
 ## Technical Skills
 
-**Core ML/AI:** PyTorch, TensorFlow, Keras, CUDA, Torchvision, BERT, Attention Mechanisms, Hugging Face Transformers, timm, ConvNeXt 
+**Core ML/AI:** PyTorch, TensorFlow, Keras, CUDA, Torchvision, BERT, Attention Mechanisms, Hugging Face Transformers, timm, ConvNeXt  
 **Algorithms:** Supervised & Unsupervised Learning, CNNs, Neural Networks, Decision Trees, XGBoost, Recommender Systems, Reinforcement Learning (DQN)  
 **ML Engineering:** FastAPI, Docker, RESTful APIs, CI/CD (GitHub Actions), Transfer Learning, Hyperparameter Tuning, Model Evaluation (ROC/AUC, Precision, Recall, F1)  
+**Cloud/Infra:** AWS ECS Fargate, ECR, IAM, SSM Parameter Store, Cloudflare (DNS/TLS)  
+**Full-Stack / Web:** Django, React, REST API design, SQL (SQLite)  
 **Data:** NumPy, Pandas, Feature Engineering, Data Preprocessing  
 **Languages:** Python, SQL, JavaScript, C  
 **Tools:** Git, Linux, Bash, Pytest, Ruff, Pyright, uv, Jupyter Notebooks, HuggingFace Hub  
@@ -24,22 +26,35 @@ Applied ML/AI engineer with hands-on experience building end-to-end systems in P
 
 ## Projects
 
-### PII Redaction API
-*PyTorch · DeBERTa-v3 · HuggingFace Trainer · FastAPI · Docker · AWS ECS Fargate (in progress)*
-[GitHub](https://github.com/ben-gid/pii_redaction)
+### PII Redaction
+*PyTorch · DeBERTa-v3 · HuggingFace Trainer/Hub · FastAPI · Docker · AWS ECS Fargate · GitHub Actions CI/CD*
+[GitHub](https://github.com/ben-gid/pii_redaction) · [Live Demo](https://pii-redaction.bengid.dev/demo)
 
-Fine-tuning `microsoft/deberta-v3-base` on the `ai4privacy/pii-masking-300k` dataset for named entity recognition across PII categories including names, emails, SSNs, and phone numbers. Implements BIO token classification with proper subword label alignment, evaluated via seqeval entity-level F1. Post-processing layer aggregates per-token logits into character-level spans and replaces them with typed placeholders (`[NAME]`, `[EMAIL]`, etc.) with a configurable confidence threshold. Deployed as a FastAPI service (API key auth, Pydantic validation, structured error responses) on AWS ECS Fargate via Docker + ECR, with a public Gradio demo on HuggingFace Spaces. Training tracked with Weights & Biases; fine-tuned model and card published to HuggingFace Hub.
+**Models:** [base](https://huggingface.co/bengid/pii-redaction-deberta-base) · [small](https://huggingface.co/bengid/pii-redaction-deberta-small) · [xsmall](https://huggingface.co/bengid/pii-redaction-deberta-xsmall)
 
----
-
-### Gravitational Lens Finding — ML4SCI DeepLense GSoC 2026 Evaluation
-*PyTorch · ConvNeXt-Tiny · EfficientNet-B0 · timm · HuggingFace Hub GitHub*
-[GitHub](https://github.com/ben-gid/deeplense_tests)
-
-- Achieved **0.9887 AUROC** on binary gravitational lens finding (16.6:1 class imbalance) using ConvNeXt-Tiny — within 0.006 of a purpose-built equivariant neural network (Parul et al., NeurIPS ML4PS 2024), despite no built-in rotational invariance.
-- Achieved **0.98 macro AUROC** on 3-class lensing substructure classification (no substructure / subhalo / vortex) via two-phase fine-tuning of EfficientNet-B0 with discriminative learning rates.
-- Addressed severe class imbalance through combined `WeightedRandomSampler` oversampling and calibrated `BCEWithLogitsLoss` pos-weighting, avoiding the AUC degradation that comes from using the raw imbalance ratio naively.
-- Applied physics-motivated augmentation only (rotations ±180°, flips) — no color/intensity distortions that would corrupt physical flux measurements across telescope filter channels.
+- Fine-tuned three DeBERTa-v3 models on `ai4privacy/pii-masking-300k` for PII named entity
+  recognition across 27 entity types (55 BIO labels: names, emails, SSNs, phone numbers, etc.),
+  achieving macro F1 of **0.9557 (base)**, **0.9517 (small)**, and **0.9424 (xsmall)** on the
+  held-out test set.
+- Built a custom `WeightedTokenClassificationTrainer` with class-balanced cross-entropy loss to
+  handle severe O-token imbalance; trained in two phases (frozen backbone → full fine-tune) using
+  bf16 mixed precision, with W&B logging including per-entity F1 and interactive HTML prediction
+  tables.
+- Implemented a `PIIRedactor` class with overlapping token chunking (paragraph/sentence-aware
+  boundary alignment), overlap resolution by max confidence score, and structured Pydantic
+  `Entity` / `RedactionResponse` schemas; exposed via a CLI supporting `--text`, `--file`,
+  threshold tuning, stride/max-length overrides, and JSON output.
+- Built a FastAPI service with API-key-authenticated `POST /redact`, `GET /health`,
+  `GET /model-info`, and an interactive dark-mode `GET /demo` with glassmorphism layout,
+  drag-and-drop file upload, and confidence badges; `POST /demo/redact` is unauthenticated but
+  rate-limited (10/day per IP via slowapi). 14 unit tests mock the redactor across auth, rate
+  limiting, validation, and edge cases.
+- Published all three model checkpoints to HuggingFace Hub with full model cards documenting
+  per-model F1, GPU latency benchmarks, distribution-shift behavior, and per-entity tradeoffs.
+- Deployed to **AWS ECS Fargate** behind a custom domain with Cloudflare TLS termination and
+  dynamic DNS updates on every deploy; secrets managed via SSM Parameter Store. Built a full
+  GitHub Actions CI/CD pipeline (Ruff, Pyright, Pytest, Docker build, ECR push, ECS service
+  update) that ships every push to `main` straight to production.
 
 ---
 
@@ -47,43 +62,35 @@ Fine-tuning `microsoft/deberta-v3-base` on the `ai4privacy/pii-masking-300k` dat
 *PyTorch · EfficientNet · FastAPI · Docker · HuggingFace Hub · GitHub Actions*  
 [GitHub](https://github.com/ben-gid/flowers) · [Model](https://huggingface.co/bengid/flower-classifier)
 
-- Achieved **>93% test accuracy** on the 102-class Oxford Flowers dataset via two-stage fine-tuning of EfficientNet-B0 — a 30-point improvement over a custom CNN (63%) trained from scratch on the same data.
-- Implemented a two-stage transfer learning pipeline: classifier-only warm-up (20 epochs) followed by partial backbone unfreeze with **differential learning rates** per layer group (1e-5 → 1e-3), preserving low-level ImageNet features while adapting high-level representations.
-- Applied class-balanced sample weighting via `sklearn.utils.compute_class_weight` to handle Oxford-102's uneven class distribution, combined with CosineAnnealingLR scheduling and AdamW optimization.
-- Built a custom `FlowerDataset` class (parsing MATLAB `.mat` label files via `scipy.io`) and a `SubsetWithTransform` wrapper enabling per-split augmentation pipelines on shared dataset objects — filling a gap in native `torchvision` tooling.
-- Served both models simultaneously via a FastAPI service with a shared lifespan context (`/predict`, `/predict/scratch`, `/health`), enforcing file-type, size (≤ 5 MB), and minimum dimension (224×224) validation.
-- Integrated HuggingFace Hub for automatic weight download on cold start; containerized with Docker for reproducible deployment.
-- Enforced code quality with a full CI pipeline (GitHub Actions): Ruff linting, Pyright type checking, Pytest suite (model-mocked for GPU-free CI), and Docker build verification on every push.
+- Achieved **>93% test accuracy** on the 102-class Oxford Flowers dataset via two-stage transfer learning of EfficientNet-B0 (classifier-only warm-up, then partial backbone unfreeze with differential learning rates).
+- Served the model via a FastAPI service (`/predict`, `/health`) with file-type, size, and image-dimension validation; integrated automatic weight download from HuggingFace Hub on cold start.
+- Containerized with Docker with a full CI pipeline (GitHub Actions): Ruff, Pyright, Pytest (model-mocked for GPU-free CI), and Docker build verification on every push.
 
 ---
 
-### ML Fundamentals Library
-*Python · NumPy · Matplotlib · Pytest*  
-[GitHub](https://github.com/ben-gid/ml_fundamentals)
+### Network — Full-Stack Social Platform
+*Django · React · SQLite · JavaScript*
+[GitHub](https://github.com/ben-gid/Network)
 
-- Built a fully-tested, NumPy-only ML library from scratch spanning 6+ core algorithms including Linear/Logistic Regression, K-Means, Decision Trees, and a multi-layer Neural Network with manual backpropagation.
-- Implemented gradient computation by hand, enabling transparent insight into forward/backward pass dynamics and training stability.
-- Optimized numerical routines through vectorization for significant runtime performance gains over naive loop-based approaches.
-- Enforced reproducibility and documentation quality with 100% Pytest coverage and a custom AST-based documentation generator.
+- Built a Twitter-style social platform with a Django backend (custom User, Post, Like, and Follow models, including many-to-many relations via through-models) and a React-powered frontend.
+- Designed RESTful endpoints for authentication, posting, following, and liking, with server-side validation and Fetch API calls for asynchronous, no-reload post editing, liking, and pagination.
 
 ---
 
-### Deep Q-Network (DQN) for Autonomous Lunar Landing
-*TensorFlow · Keras · Gymnasium · Python*  
-[GitHub](https://github.com/ben-gid/LunarLander)
+### Gravitational Lens Finding — ML4SCI DeepLense (GSoC 2026 Evaluation)
+*PyTorch · ConvNeXt-Tiny · EfficientNet-B0 · timm*
+[GitHub](https://github.com/ben-gid/deeplense_tests)
 
-- Implemented a DQN agent from scratch to solve the LunarLander-v3 environment, reaching the solved threshold with a sustained rolling average score above 200.
-- Engineered training stability via Experience Replay (deque buffer) and Target Networks with soft updates (τ=0.001) to reduce Q-value divergence.
-- Accelerated training with `tf.function` graph-mode compilation, reducing per-episode compute time.
+- Achieved **0.9887 AUROC** on binary gravitational lens classification (16.6:1 class imbalance) using ConvNeXt-Tiny, and **0.98 macro AUROC** on 3-class substructure classification via two-phase fine-tuning of EfficientNet-B0.
+- Addressed severe class imbalance with combined `WeightedRandomSampler` oversampling and calibrated `BCEWithLogitsLoss` pos-weighting.
 
 ---
 
-### Crossword Puzzle Generator (Constraint Satisfaction Solver)
-*Python*  
-[GitHub](https://github.com/ben-gid/Crossword)
+### Additional Projects
 
-- Implemented a CSP solver to generate dense crossword grids, reducing the backtracking search space by over 80% using AC-3 arc consistency.
-- Integrated MRV and LCV heuristics for improved constraint propagation speed and solution quality.
+- **ML Fundamentals Library** *(Python, NumPy, Pytest)* — Built a from-scratch ML library (Linear/Logistic Regression, K-Means, Decision Trees, multi-layer NN with manual backprop) with 100% test coverage and a custom AST-based doc generator. [GitHub](https://github.com/ben-gid/ml_fundamentals)
+- **DQN for Autonomous Lunar Landing** *(TensorFlow, Keras, Gymnasium)* — Implemented a DQN agent with experience replay and soft-update target networks, solving LunarLander-v3 with a rolling average score above 200. [GitHub](https://github.com/ben-gid/LunarLander)
+- **Crossword Generator** *(Python, CSP/AC-3)* — Built a constraint satisfaction solver using AC-3 arc consistency plus MRV/LCV heuristics, reducing backtracking search space by over 80%. [GitHub](https://github.com/ben-gid/Crossword)
 
 ---
 

@@ -7,7 +7,7 @@ Los Angeles, CA 90034 · (310) 613-3655 · bgidanian@gmail.com
 
 ## Summary
 
-Full-stack and applied ML engineer who builds and ships systems end-to-end — from RESTful APIs and React frontends to fine-tuned ML models in production-ready services. Comfortable across the stack: Python backend services (FastAPI, Django), React/JavaScript frontends, Docker containerization, and CI/CD. Background spans NLP (transformer fine-tuning, token classification), computer vision (transfer learning, class imbalance), and full-stack web development. Strong with AI-assisted development workflows. Moves fast, experiments deliberately, and focuses on shipping things that work.
+Full-stack and applied ML engineer who builds and ships systems end-to-end — from RESTful APIs and React frontends to fine-tuned ML models deployed as live production services on AWS. Comfortable across the stack: Python backend services (FastAPI, Django), React/JavaScript frontends, Docker containerization, cloud deployment (AWS ECS Fargate), and CI/CD. Background spans NLP (transformer fine-tuning, token classification), computer vision (transfer learning, class imbalance), and full-stack web development. Strong with AI-assisted development workflows. Moves fast, experiments deliberately, and focuses on shipping things that work.
 
 ---
 
@@ -18,7 +18,7 @@ Full-stack and applied ML engineer who builds and ships systems end-to-end — f
 **Backend / APIs:** FastAPI, Django, RESTful API design, SQL (SQLite)  
 **ML/AI:** PyTorch, TensorFlow, Keras, Hugging Face Transformers, BERT, ConvNeXt, timm, CUDA  
 **ML Engineering:** Transfer Learning, Hyperparameter Tuning, Model Evaluation (ROC/AUC, F1, Precision/Recall), Weights & Biases  
-**Infra & DevOps:** Docker, GitHub Actions (CI/CD), Linux (Arch), Bash, Git  
+**Infra & DevOps:** Docker, GitHub Actions (CI/CD), AWS (ECS Fargate, ECR, IAM, SSM Parameter Store), Cloudflare (DNS/TLS), Linux (Arch), Bash, Git  
 **Data:** NumPy, Pandas, Feature Engineering, Data Preprocessing  
 **Tools:** HuggingFace Hub, Pytest, Ruff, Pyright, uv, Jupyter Notebooks  
 
@@ -27,8 +27,8 @@ Full-stack and applied ML engineer who builds and ships systems end-to-end — f
 ## Projects
 
 ### PII Redaction
-*PyTorch · DeBERTa-v3 · HuggingFace Trainer/Hub · FastAPI · CLI*
-[GitHub](https://github.com/ben-gid/pii_redaction)
+*PyTorch · DeBERTa-v3 · HuggingFace Trainer/Hub · FastAPI · Docker · AWS ECS Fargate · GitHub Actions CI/CD*
+[GitHub](https://github.com/ben-gid/pii_redaction) · [Live Demo](https://pii-redaction.bengid.dev/demo)
 
 **Models:** [base](https://huggingface.co/bengid/pii-redaction-deberta-base) · [small](https://huggingface.co/bengid/pii-redaction-deberta-small) · [xsmall](https://huggingface.co/bengid/pii-redaction-deberta-xsmall)
 
@@ -51,6 +51,10 @@ Full-stack and applied ML engineer who builds and ships systems end-to-end — f
   limiting, validation, and edge cases.
 - Published all three model checkpoints to HuggingFace Hub with full model cards documenting
   per-model F1, GPU latency benchmarks, distribution-shift behavior, and per-entity tradeoffs.
+- Deployed to **AWS ECS Fargate** on a custom domain with Cloudflare TLS termination and dynamic
+  DNS updates on every deploy, secrets managed via SSM Parameter Store, and a full GitHub Actions
+  CI/CD pipeline (lint, type-check, test, Docker build, ECR push, ECS service update) that ships
+  every push straight to production.
 
 ---
 
