@@ -12,7 +12,7 @@ Applied ML/AI engineer in Los Angeles building end-to-end systems from raw data 
 
 ### 🛠️ Tech Stack
 
-**ML/AI:** PyTorch · TensorFlow · Keras · CUDA · Hugging Face Transformers & Hub · Torchvision · timm · ConvNeXt · BERT · Sentence Transformers · Scikit-learn · Reinforcement Learning
+**ML/AI:** PyTorch · PyTorch Lightning · TensorFlow · Keras · CUDA · Hugging Face Transformers & Hub · Torchvision · timm · ConvNeXt · BERT · Sentence Transformers · Scikit-learn · Reinforcement Learning
 
 **NLP/LLM:** LangChain · RAG Pipelines · Vector Databases (ChromaDB / Pinecone) · RAGAS Evaluation · Prompt Engineering
 
@@ -34,7 +34,7 @@ Applied ML/AI engineer in Los Angeles building end-to-end systems from raw data 
 
 * **[Gravitational Lens Finding — ML4SCI DeepLense GSoC 2026](https://github.com/ben-gid/deeplense_tests)** — Achieved **0.9887 AUROC** on binary gravitational lens finding (16.6:1 class imbalance) with ConvNeXt-Tiny — within 0.006 of a purpose-built equivariant neural network (Parul et al., NeurIPS ML4PS 2024). Achieved **0.98 macro AUROC** on 3-class lensing substructure classification via two-phase EfficientNet-B0 fine-tuning with discriminative learning rates. Addressed severe class imbalance through WeightedRandomSampler and calibrated BCEWithLogitsLoss pos-weighting.
 
-* **[Flower Classification API](https://github.com/ben-gid/flowers)** — Production-ready CV service achieving **>93% accuracy** on 102 flower classes via two-stage EfficientNet-B0 fine-tuning with differential learning rates (+30 points over a custom CNN trained from scratch). Served via FastAPI with dual model endpoints, HuggingFace Hub weight hosting, and a full CI pipeline: Ruff → Pyright → Pytest → Docker build.
+* **[Flower Classification API](https://github.com/ben-gid/flowers)** — PyTorch Lightning pipeline across 11 backbones tracked in MLflow (71 runs) on 102 flower classes; best model (**ViT-B/16**) reached **0.9796 accuracy / 0.9637 macro-F1**, with **EfficientNetV2-S** (4x smaller, 3x faster) as the serving default. Found and fixed a data-leakage bug that had silently inflated every run's validation/test accuracy to ~1.0, re-evaluated both published models on genuinely held-out data, and added a regression test so it can't come back. Restructured into a v2 FastAPI service (`core`/`routers`/`utils`, `AppState` singleton, HuggingFace Hub weight loading) with a full CI pipeline: Ruff → Pyright → Pytest → Docker build.
 
 * **[ML Fundamentals Library](https://github.com/ben-gid/ml_fundamentals)** — NumPy-only ML library built from scratch with manual backpropagation, covering Linear/Logistic Regression, K-Means, Decision Trees, and a multi-layer Neural Network. 100% Pytest coverage with a custom AST-based documentation generator.
 
