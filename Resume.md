@@ -13,7 +13,7 @@ Applied AI/ML engineer who builds and ships systems end-to-end — from fine-tun
 
 ## Technical Skills
 
-**Core ML/AI:** PyTorch, TensorFlow, Keras, CUDA, Torchvision, BERT, Attention Mechanisms, Hugging Face Transformers, timm, ConvNeXt  
+**Core ML/AI:** PyTorch, PyTorch Lightning, TensorFlow, Keras, CUDA, Torchvision, BERT, Attention Mechanisms, Hugging Face Transformers, timm, ConvNeXt, MLflow  
 **Algorithms:** Supervised & Unsupervised Learning, CNNs, Neural Networks, Decision Trees, XGBoost, Recommender Systems, Reinforcement Learning (DQN)  
 **ML Engineering:** FastAPI, Docker, RESTful APIs, CI/CD (GitHub Actions), Transfer Learning, Hyperparameter Tuning, Model Evaluation (ROC/AUC, Precision, Recall, F1)  
 **Cloud/Infra:** AWS ECS Fargate, ECR, IAM, SSM Parameter Store, Cloudflare (DNS/TLS)  
@@ -59,12 +59,14 @@ Applied AI/ML engineer who builds and ships systems end-to-end — from fine-tun
 ---
 
 ### Flower Classification Inference Service
-*PyTorch · EfficientNet · FastAPI · Docker · HuggingFace Hub · GitHub Actions*  
-[GitHub](https://github.com/ben-gid/flowers) · [Model](https://huggingface.co/bengid/flower-classifier)
+*PyTorch Lightning · MLflow · FastAPI · Docker · HuggingFace Hub · GitHub Actions*
+[GitHub](https://github.com/ben-gid/flowers) · **Models:** [EfficientNetV2-S](https://huggingface.co/bengid/efficientnetv2-s-flower-classifier) (serving default) · [ViT-B/16](https://huggingface.co/bengid/vit-flower-classifier) (best accuracy)
 
-- Achieved **>93% test accuracy** on the 102-class Oxford Flowers dataset via two-stage transfer learning of EfficientNet-B0 (classifier-only warm-up, then partial backbone unfreeze with differential learning rates).
-- Served the model via a FastAPI service (`/predict`, `/health`) with file-type, size, and image-dimension validation; integrated automatic weight download from HuggingFace Hub on cold start.
-- Containerized with Docker with a full CI pipeline (GitHub Actions): Ruff, Pyright, Pytest (model-mocked for GPU-free CI), and Docker build verification on every push.
+- Rebuilt a from-scratch/EfficientNet-B0 pipeline into a config-driven PyTorch Lightning system spanning 11 torchvision backbones (EfficientNet, ResNet, ViT, ConvNeXt, MobileNet, VGG) selected via a name-string registry, tracking 71 fine-tuning runs in MLflow on the 102-class Oxford Flowers dataset; best model (**ViT-B/16**) reached **0.9796 test accuracy / 0.9637 macro-F1**, with **EfficientNetV2-S** (0.9642 / 0.9364, 4x smaller, 3x faster) shipped as the serving default.
+- Diagnosed and fixed a data-leakage bug that had silently built validation and test splits from the training subset, inflating all 71 runs' reported accuracy to ~0.99–1.0; re-evaluated both published models against genuinely held-out data and added a regression test (`test_splits_are_disjoint`) to prevent recurrence — a debugging exercise that also corrected the sweep's architecture rankings and checkpoint-selection logic.
+- Built a custom `BackboneFinetuning` Lightning callback for two-stage fine-tuning (frozen head warm-up → full backbone unfreeze at a lower LR) and class-weighted `CrossEntropyLoss` to handle 40–258-image-per-class imbalance, tracking macro-F1 as the primary metric given the long tail.
+- Restructured the FastAPI service from a flat v1 module into a v2 package (`core`/`routers`/`utils`) with an `AppState` singleton, HuggingFace Hub-backed weight loading and caching, structured logging/request middleware, and a Pydantic validation dependency enforcing file type, size, and image-dimension constraints on `POST /classify`.
+- Built a GitHub Actions CI pipeline (Ruff, Pyright, Pytest, Docker build verification) and a FastAPI + Jinja training dashboard for launching runs and browsing MLflow history; containerized only the v2 API + shared `src/` for deployment.
 
 ---
 
