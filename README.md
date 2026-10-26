@@ -73,3 +73,5 @@ Built by directing **Claude Code**. I set the specs, architecture, invariants, a
 
 * **Email:** [bgidanian@gmail.com](mailto:bgidanian@gmail.com)
 * **LinkedIn:** [linkedin.com/in/benyamin-gidanian](https://www.linkedin.com/in/benyamin-gidanian-46305a364/)
+* **Website:** [bengid.dev](https://bengid.dev)
+* **Resume:** [Download PDF](https://bengid.dev/Resume.pdf) · [view on GitHub](Resume.pdf)
