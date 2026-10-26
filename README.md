@@ -1,5 +1,7 @@
 # Hi — I'm Benyamin Gidanian 👋
 
+📫 [bgidanian@gmail.com](mailto:bgidanian@gmail.com) · [LinkedIn](https://www.linkedin.com/in/benyamin-gidanian-46305a364/) · [Hugging Face](https://huggingface.co/bengid) · [bengid.dev](https://bengid.dev) · 📄 [Resume (PDF)](https://bengid.dev/Resume.pdf)
+
 Applied ML/AI engineer in Los Angeles building end-to-end systems from raw data to deployed, tested inference services. I built my foundation through Harvard's CS50 and Stanford's Machine Learning Specialization, and I'm currently expanding into **NLP, LLMs, RAG, and MLOps** — shipping real projects at each step.
 
 ---
@@ -66,12 +68,3 @@ Built by directing **Claude Code**. I set the specs, architecture, invariants, a
 * **Build to learn:** Small, practical experiments teach me more than tutorials.
 * **Ship it tested:** CI pipelines, typed code, and reproducible setups are part of the work, not afterthoughts.
 * **Iterate on results:** I benchmark, measure, and go again — 63% → 93% doesn't happen in one shot.
-
----
-
-### 📫 Contact
-
-* **Email:** [bgidanian@gmail.com](mailto:bgidanian@gmail.com)
-* **LinkedIn:** [linkedin.com/in/benyamin-gidanian](https://www.linkedin.com/in/benyamin-gidanian-46305a364/)
-* **Website:** [bengid.dev](https://bengid.dev)
-* **Resume:** [Download PDF](https://bengid.dev/Resume.pdf) · [view on GitHub](Resume.pdf)
